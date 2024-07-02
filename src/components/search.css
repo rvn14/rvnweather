@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.search-wrapper {
+  position: relative;
+  width: 350px;
+  font-family: "Roboto", sans-serif; 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ 
+  
+}
+
+.search-wrapper > .input-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9a4;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0 15px;
+  border-radius: 15px;
+
+}
+
+.search-wrapper > input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: transparent;
+   
+}
+
+.search-wrapper > input:focus {
+  outline: none;
+}
+
+.loading,
+.error {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.error {
+  color: red;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 45px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  z-index: 10;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  list-style: none;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover,
+.suggestion-item[aria-selected="true"] {
+  background-color: #f0f0f0;
+}
+
+.suggestion-item.activate{
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  
+}
+
+/* Track */
+.suggestions-list::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.suggestions-list::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.searchicon{
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  color: #000000;
+  cursor: pointer;
+  background: #ccc;
+  padding: 11px;
+
+}
