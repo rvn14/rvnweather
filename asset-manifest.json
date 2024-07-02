@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rvnweather/static/css/main.2f6b323a.css",
+    "main.js": "/rvnweather/static/js/main.b587aa77.js",
+    "static/media/forecast.jpg": "/rvnweather/static/media/forecast.122ea27651c22d2ff102.jpg",
+    "static/media/rainy.jpg": "/rvnweather/static/media/rainy.2153e068f32bdaa9d230.jpg",
+    "static/media/forweath.jpg": "/rvnweather/static/media/forweath.2f876ba5f0110b3c5a70.jpg",
+    "index.html": "/rvnweather/index.html",
+    "main.2f6b323a.css.map": "/rvnweather/static/css/main.2f6b323a.css.map",
+    "main.b587aa77.js.map": "/rvnweather/static/js/main.b587aa77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f6b323a.css",
+    "static/js/main.b587aa77.js"
+  ]
+}
