@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "react-scripts start",
+    "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "deploy": "gh-pages -d dist",
     "test": "react-scripts test",
     "build-css": "tailwindcss build src/input.css -o src/style.css",
     "eject": "react-scripts eject"

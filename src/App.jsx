@@ -1,4 +1,4 @@
-import Currweather from '../Currweather'
+import Currweather from './Currweather'
 import './App.css'
 
 function App() {
