@@ -1,0 +1,52 @@
+
+::-webkit-scrollbar{
+  display: none;
+}
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Avant-Garde';
+  src: url('../public/fonts/Avant-Garde.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../public/fonts/Roboto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/fonts/Inter.ttf') format('truetype');
+
+}
+
+
+@theme {
+  --font-mont: Montserrat, "sans-serif"; 
+  --font-rob: Roboto, "sans-serif";
+  --font-avant: Avant-Garde, "sans-serif";
+  --font-arial: Arial , "sans-serif";
+  --font-inter: Inter, "sans-serif";
+
+}
+
+.bgrnd{
+  background: url('images/bggg.jpg') no-repeat center ;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+.bgglss{
+  background-color: rgba(255, 255, 255, 0); /* Very light tint, adjust as needed */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* For Safari support */
+}
