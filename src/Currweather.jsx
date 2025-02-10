@@ -157,7 +157,7 @@ function Currweather() {
         <div className="text-white font-mont text-2xl animate-pulse"><p className="text-center">RVN Weather <br/> <span className="text-xl font-light">Loading...</span>  </p></div>
       </div>
 
-      <div className="searchbar absolute w-full mt-6 flex bg-transparent">
+      <div className="searchbar absolute w-full mt-6 flex bg-transparent z-30">
         <Geolocation setLocation={setLocation} />
       </div>
 
