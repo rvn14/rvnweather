@@ -50,3 +50,247 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px); /* For Safari support */
 }
+
+
+@media screen and (max-width: 1024px) {
+  .forecastchild{
+    scale: 0.8;
+    width: 250px;
+
+  }
+
+  .forecasts{
+    align-self: center;
+    width: 95vw;
+    margin-top: -50px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .forecasts {
+      display: flex;
+      margin:0px;
+      align-items: center;
+      justify-content: center;
+      scale: 0.85;
+    }
+
+    .forecastchild{
+      margin: 0px;
+      padding: 0px;
+      width: 400px;
+    }
+
+    .currweath{
+      padding: 0px;
+      scale: 0.9;
+      
+    }
+
+    .currdet{
+      padding: 0px;
+      margin: 0px;
+      margin-top: 20px;
+      display: flex;
+      scale: 0.9;
+      background-color: #ffffff18;
+
+    }
+
+    .detchild{
+      margin: 20px;
+    }
+
+    .detdata {
+      padding: 0px;
+      padding-left: 10px;
+    }
+
+    .currcont{
+      margin: 0px;
+      padding: 0px;
+      margin-top: 40px;
+      flex-direction: column;
+      width: 95vw;
+      align-self: center;
+    }
+  
+}
+
+
+@media screen and (max-width: 426px) {
+  .forecasts {
+    display: flex;
+    margin:0px;
+    margin-top: -30px;
+    align-items: center;
+    width: 100vw;
+    scale: 0.5;
+  }
+
+  .forecastchild{
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .searchbar{
+    scale: 0.8;
+  }
+
+  .currweath{
+    padding: 0px;
+    scale: 0.7;
+    
+  }
+
+  .currdet{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    display: flex;
+    scale: 0.7;
+    background-color: #ffffff18;
+
+  }
+
+  .detchild{
+    margin: 20px;
+  }
+
+  .detdata {
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .currcont{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    flex-direction: column;
+    width: 95vw;
+    align-self: center;
+  }
+
+}
+
+@media screen and (max-width: 376px) {
+  .forecasts {
+    display: flex;
+    margin:0px;
+    margin-top: -50px;
+    align-items: center;
+    width: 100vw;
+    scale: 0.44;
+  }
+
+  .forecastchild{
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .searchbar{
+    scale: 0.8;
+  }
+
+  .currweath{
+    padding: 0px;
+    scale: 0.65;
+    
+  }
+
+  .currdet{
+    padding: 0px;
+    margin: 0px;
+    margin-top: -20px;
+    display: flex;
+    scale: 0.6;
+    background-color: #ffffff18;
+
+  }
+
+  .detchild{
+    margin: 20px;
+  }
+
+  .detdata {
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .currcont{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    flex-direction: column;
+    width: 95vw;
+    align-self: center;
+  }
+
+}
+
+@media screen and (max-width: 321px) {
+  .forecasts {
+    display: flex;
+    flex-direction: column;
+    scale: 1;  
+    margin: 0px;
+  }
+
+  .forecastchild{
+    margin: 0px;
+    padding:0px;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    scale: 0.9;
+  }
+
+  .fcimg{
+    scale: 0.8;
+  }
+
+
+  .searchbar{
+    scale: 0.8;
+  }
+
+  .currweath{
+    padding: 0px;
+    scale: 0.55;
+    
+  }
+
+  .currdet{
+    padding: 0px;
+    margin: 0px;
+    margin-top: -40px;
+    display: flex;
+    scale: 0.55;
+    background-color: #ffffff18;
+
+  }
+
+  .detchild{
+    margin: 20px;
+  }
+
+  .detdata {
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .currcont{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    flex-direction: column;
+    width: 95vw;
+    align-self: center;
+  }
+
+}

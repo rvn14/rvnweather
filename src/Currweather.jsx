@@ -147,7 +147,7 @@ function Currweather() {
   }
 
   return (
-    <div className="bgrnd absolute top-0 w-full">
+    <div className="bgrnd absolute top-0 w-full flex flex-col ">
       {/* Preloader with black background and animated loading text */}
       <div
         className={`fixed inset-0 flex items-center justify-center bg-black z-50 transition-opacity duration-500 ${
@@ -157,12 +157,12 @@ function Currweather() {
         <div className="text-white font-mont text-2xl animate-pulse"><p className="text-center">RVN Weather <br/> <span className="text-xl font-light">Loading...</span>  </p></div>
       </div>
 
-      <div className="absolute w-full mt-6 flex bg-transparent">
+      <div className="searchbar absolute w-full mt-6 flex bg-transparent">
         <Geolocation setLocation={setLocation} />
       </div>
 
-      <div className="m-16 flex justify-between">
-        <div className="flex justify-between w-[500px] mt-10">
+      <div className="currcont m-16 flex justify-between items-center bg-transparent">
+        <div className="currweath flex justify-between w-[500px] mt-10">
           <div>
             <div>
               <img
@@ -226,36 +226,36 @@ function Currweather() {
           </div>
         </div>
 
-        <div className="bg-[#ffffff18] rounded-2xl p-8">
-          <div className="flex">
-            <PiDropLight className="text-5xl mt-2 font-extralight text-gray-50" />
+        <div className="currdet rounded-2xl p-8">
+          <div className="detchild flex">
+            <PiDropLight className="detico text-5xl mt-2 font-extralight text-gray-50" />
             <div>
-              <div className="temp pl-5 text-lg text-gray-50 font-light">
+              <div className="detdata temp pl-5 text-lg text-gray-50 font-light">
                 Humidity
               </div>
-              <div className="temp pl-5 text-4xl font-inter font-bold text-gray-50">
+              <div className="detdata temp pl-5 text-4xl font-inter font-bold text-gray-50">
                 {weatherData ? Math.floor(weatherData.main.humidity) : `00`}%
               </div>
             </div>
           </div>
-          <div className="flex mt-10">
-            <WiBarometer className="text-5xl font-extralight text-gray-50" />
+          <div className="detchild flex mt-10">
+            <WiBarometer className="detico text-5xl font-extralight text-gray-50" />
             <div>
-              <div className="temp pl-5 text-lg text-gray-50 font-light">
+              <div className="detdata temp pl-5 text-lg text-gray-50 font-light">
                 Pressure
               </div>
-              <div className="temp pl-5 font-inter text-4xl font-bold text-gray-50">
+              <div className="detdata temp pl-5 font-inter text-4xl font-bold text-gray-50">
                 {weatherData ? Math.floor(weatherData.main.pressure) : `00`} mb
               </div>
             </div>
           </div>
-          <div className="flex mt-10">
-            <PiWindLight className="text-5xl font-extralight text-gray-50" />
+          <div className="detchild flex mt-10">
+            <PiWindLight className="detico text-5xl font-extralight text-gray-50" />
             <div>
-              <div className="temp pl-5 text-lg text-gray-50 font-light">
+              <div className="detdata temp pl-5 text-lg text-gray-50 font-light">
                 Wind
               </div>
-              <div className="temp pl-5 font-inter text-4xl font-bold text-gray-50">
+              <div className="detdata temp pl-5 font-inter text-4xl font-bold text-gray-50">
                 {weatherData ? weatherData.wind.speed : `00`} kmph
               </div>
             </div>
@@ -263,27 +263,33 @@ function Currweather() {
         </div>
       </div>
 
-      <div className="m-16 w-fit-content flex justify-between bg-transparent">
+      <div className="forecasts m-16 flex justify-between bg-transparent">
         {forecastData ? (
           // Render first 6 forecast entries dynamically using map()
           forecastData.list.slice(0, 6).map((forecast, index) => (
             <div
               key={index}
-              className="w-48 h-56 flex flex-col items-center justify-center rounded-2xl bg-[#ffffff18]"
+              className="forecastchild w-48 h-56 flex flex-col items-center justify-center rounded-2xl bg-[#ffffff18]"
             >
-              <div className="fctime font-mont font-light text-xs text-gray-50">
-                {formatShortDate(forecast.dt)}
+              <div className="fctime flex flex-col items-center justify-center">
+
+                <div className="fctime font-mont font-light text-xs text-gray-50">
+                  {formatShortDate(forecast.dt)}
+                </div>
+                <div className="fctime font-mont font-semibold text-gray-50">
+                  {formatTime(forecast.dt)}
+                </div>
               </div>
-              <div className="fctime font-mont font-semibold text-gray-50">
-                {formatTime(forecast.dt)}
-              </div>
-              <img
-                src={`./images/assets/${forecast.weather[0].icon}.png`}
-                alt={forecast.weather[0].description}
-                className="weathicon w-16"
-              />
-              <div className="temp text-lg font-inter text-gray-50">
-                {forecast.weather[0].main}
+              <div className="fcimg flex flex-col items-center justify-center">
+
+                <img
+                  src={`./images/assets/${forecast.weather[0].icon}.png`}
+                  alt={forecast.weather[0].description}
+                  className="weathicon w-16"
+                />
+                <div className="temp text-lg font-inter text-gray-50">
+                  {forecast.weather[0].main}
+                </div>
               </div>
               <div className="temp text-4xl font-inter font-bold text-gray-50">
                 {Math.floor(forecast.main.temp)}°C
